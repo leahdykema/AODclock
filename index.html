@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en_US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Leah Dykema">
+        <meta name="description" content="A simple clock and basic current weather site for an always on display tablet.">
+        <meta name="theme-color" content="#000" id="theme-color-meta">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Overview Panel</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="container">
+            <div class="clock view active" id="clock">
+                <div id="date"></div>
+                <div id="time"></div>
+                <div id="battery"></div>
+            </div>
+            <div class="weather view" id="weather">
+                <div id="location"></div>
+                <div style="display: flex; padding-top: auto; padding-bottom: auto; margin-top: auto; margin-bottom: auto;">
+                    <div id="condition"></div>
+                    <div style="display: block; text-align: left; padding-left: 50px; padding-top: auto; padding-bottom: auto; margin-top: auto; margin-bottom: auto;">
+                        <div id="temp"></div>
+                        <div id="hl"></div>
+                        <div id="uv"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
