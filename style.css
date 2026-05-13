@@ -9,6 +9,7 @@
     50% { opacity: 0.95; }
 }
 
+/* Desktop */
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
@@ -78,4 +79,47 @@ body {
 #uv,
 #hl {
     animation: float 1s ease-in-out infinite, fade 1s ease-in-out infinite;
+}
+
+/* Tablet */
+@media (max-width: 840px) {
+    .clock,
+    .weather,
+    #condition {
+        font-size: 10rem;
+    }
+
+    #battery,
+    #date,
+    #location {
+        font-size: 2rem;
+    }
+
+    #temp,
+    #uv,
+    #hl {
+        font-size: 2rem;
+    }
+}
+
+/* Phone */
+
+@media (max-width: 430px) {
+    .clock,
+    .weather,
+    #condition {
+        font-size: 5rem;
+    }
+
+    #battery,
+    #date,
+    #location {
+        font-size: 1.5rem;
+    }
+
+    #temp,
+    #uv,
+    #hl {
+        font-size: 1rem;
+    }
 }
