@@ -55,8 +55,9 @@ body {
     opacity: 0.8;
 }
 
-#condition {
-    font-size: 15rem;
+.condition {
+    height: 11rem;
+    width: 11rem;
 }
 
 #location {
@@ -84,9 +85,13 @@ body {
 /* Tablet */
 @media (max-width: 840px) {
     .clock,
-    .weather,
-    #condition {
+    .weather {
         font-size: 10rem;
+    }
+
+    .condition {
+        height: 7.5rem;
+        width: 7.5rem;
     }
 
     #battery,
@@ -106,9 +111,13 @@ body {
 
 @media (max-width: 430px) {
     .clock,
-    .weather,
-    #condition {
+    .weather {
         font-size: 5rem;
+    }
+
+    .condition {
+        height: 4rem;
+        width: 4rem;
     }
 
     #battery,

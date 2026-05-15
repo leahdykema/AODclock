@@ -28,16 +28,16 @@ function updateClock() {
     document.getElementById("date").textContent = date;
 }
 function getWeatherIcon(code) {
-    if (code === 0) return "☀️";
-    if (code === 1) return "🌤️";
-    if (code === 2) return "⛅";
-    if (code === 3) return "☁️";
-    if (code >= 45 && code <= 48) return "🌫️";
-    if (code >= 51 && code <= 67) return "🌧️";
-    if (code >= 71 && code <= 77) return "❄️";
-    if (code >= 80 && code <= 82) return "🌦️";
-    if (code >= 95) return "⛈️";
-    return "❓";
+    if (code === 0) return "img/icons/sun.svg";
+    if (code === 1) return "img/icons/large-sun-cloud.svg";
+    if (code === 2) return "img/icons/small-sun-cloud.svg";
+    if (code === 3) return "img/icons/cloud.svg";
+    if (code >= 45 && code <= 48) return "img/icons/fog.svg";
+    if (code >= 51 && code <= 67) return "img/icons/cloud-rain.svg";
+    if (code >= 71 && code <= 77) return "img/icons/snow.svg";
+    if (code >= 80 && code <= 82) return "img/icons/sun-cloud-rain.svg";
+    if (code >= 95) return "img/icons/cloud-rain-lightning.svg";
+    return "img/icons/error.svg";
 }
 async function getWeather(lat, lon) {
     const res = await fetch(
@@ -51,7 +51,7 @@ async function getWeather(lat, lon) {
     const low = Math.round(data.daily.temperature_2m_min[0]);
     document.getElementById("temp").textContent = "Temp.: " + temp + "º";
     document.getElementById("uv").textContent = "UV: " + (uv ?? "N/A");
-    document.getElementById("condition").textContent = icon;
+    document.getElementById("condition").innerHTML = `<img class="condition" src="${icon}" alt="">`;
     document.getElementById("hl").textContent = `H: ${high}° L: ${low}°`;
 }
 async function getLocationName(lat, lon) {
